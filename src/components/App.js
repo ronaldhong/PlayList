@@ -10,8 +10,10 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
-        <PlayListForm />
-        <PlayList />
+        <div className="Content_box">
+          <PlayListForm />
+          <PlayList />
+        </div>
       </div>
     );
   }

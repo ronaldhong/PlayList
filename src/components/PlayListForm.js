@@ -52,20 +52,22 @@ class PlayListForm extends Component {
   render(){
     return(
       <div>
-        <form className="form" onSubmit={this.addToList}>
-          <div className="form_label">
-            <label>User Name:</label>
-            <label>Artist/Band:</label>
-            <label>Song Title</label>
-            <label>Notes about Song:</label>
+        <form onSubmit={this.addToList}>
+          <div className="form">
+            <div className="form_label">
+              <label>User Name:</label>
+              <label>Artist/Band:</label>
+              <label>Song Title</label>
+              <label>Notes about Song:</label>
+            </div>
+            <div className="form_input">
+              <input name="userName" type="text" placeholder="User" onChange={this.handleNameChange} />
+              <input name="songArtist" type="text" placeholder="Artist/Band" onChange={this.handleNameChange} />
+              <input name="songTitle" type="text" placeholder="Song" onChange={this.handleNameChange} />
+              <textarea name="songNotes" rows="4" cols="50" placeholder="Note" onChange={this.handleNameChange} />
+            </div>
           </div>
-          <div className="form_input">
-            <input name="userName" type="text" placeholder="User" onChange={this.handleNameChange} />
-            <input name="songArtist" type="text" placeholder="Artist/Band" onChange={this.handleNameChange} />
-            <input name="songTitle" type="text" placeholder="Song" onChange={this.handleNameChange} />
-            <textarea name="songNotes" rows="4" cols="50" placeholder="Note" onChange={this.handleNameChange} />
-          </div>
-          <div>
+          <div className="form_submit">
             <input name="submit" type="submit" />
           </div>
         </form>
